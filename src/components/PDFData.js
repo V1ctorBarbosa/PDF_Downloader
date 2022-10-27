@@ -24,15 +24,8 @@ export default function PDFData() {
   ]
 
   return (
-    <>
-      {PaymentsInfo.map(() => {
-        return (
-          <PDFDownloadLink document={<PDFFile data={PaymentsInfo} />} fileName="Comprovante">
-             <button> Download </button>      
-          </PDFDownloadLink>
-        )
-      })
-      }
-    </>
+    <PDFDownloadLink document={<PDFFile data={PaymentsInfo} />} fileName="Comprovante">
+        <button> Download </button>      
+    </PDFDownloadLink>
   )
 }
